@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+body {
+  font-family: var(--font-press-start), monospace;
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Fade animations - synced for 6.2 second intervals */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.7s ease-in forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+/* Red text keyword styling */
+.keyword-red {
+  color: #ff0000;
+}
+
+/* Responsive text sizing */
+@media (max-width: 768px) {
+  .slide-text {
+    font-size: 0.8rem;
+    line-height: 2;
+  }
+
+  .final-text {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .slide-text {
+    font-size: 1.2rem;
+    line-height: 2.2;
+  }
+
+  .final-text {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .slide-text {
+    font-size: 2rem;
+    line-height: 2.4;
+  }
+
+  .final-text {
+    font-size: 8rem;
+  }
+}

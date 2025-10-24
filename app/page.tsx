@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
+import ElectricBorder from "@/components/ElectricBorder";
 
 const messages = [
   "I was a dreamer once",
@@ -25,7 +26,8 @@ export default function Home() {
   const [messageVisible, setMessageVisible] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+  const wait = (ms: number) =>
+    new Promise((resolve) => setTimeout(resolve, ms));
 
   const startSequence = async () => {
     // Start audio
@@ -80,7 +82,7 @@ export default function Home() {
       <div className="three-panel-container">
         <div className="panel panel-left">
           <Image
-            src="/images/slide1.jpg"
+            src="/images/image2.jpg"
             alt="Panel 1"
             fill
             style={{ objectFit: "cover" }}
@@ -89,7 +91,7 @@ export default function Home() {
         </div>
         <div className="panel panel-center">
           <Image
-            src="/images/slide2.jpg"
+            src="/images/image3.jpg"
             alt="Panel 2"
             fill
             style={{ objectFit: "cover" }}
@@ -98,7 +100,7 @@ export default function Home() {
         </div>
         <div className="panel panel-right">
           <Image
-            src="/images/slide3.jpg"
+            src="/images/image4.jpg"
             alt="Panel 3"
             fill
             style={{ objectFit: "cover" }}
@@ -117,10 +119,11 @@ export default function Home() {
 
       {/* Begin Button Container */}
       <div className={`container ${!showButton ? "fade-out" : ""}`}>
-        <button onClick={startSequence} className="neon-button">
-          <span className="button-text">Begin</span>
-          <div className="button-glow"></div>
-        </button>
+        <ElectricBorder color="#ff0000" speed={2}>
+          <button onClick={startSequence} className="electric-button">
+            <span className="button-text">Begin</span>
+          </button>
+        </ElectricBorder>
       </div>
     </main>
   );

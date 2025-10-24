@@ -119,57 +119,35 @@ a {
   pointer-events: none;
 }
 
-/* Neon Button */
-.neon-button {
+/* Electric Button */
+.electric-button {
   position: relative;
   padding: 20px 60px;
   font-size: 2rem;
   font-family: var(--font-press-start), monospace;
   background: transparent;
-  border: 3px solid #ff0000;
+  border: none;
   color: #ff0000;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), inset 0 0 20px rgba(255, 0, 0, 0.1);
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
 }
 
-.neon-button:hover {
-  background: rgba(255, 0, 0, 0.1);
-  box-shadow: 0 0 40px rgba(255, 0, 0, 0.8), inset 0 0 40px rgba(255, 0, 0, 0.2);
+.electric-button:hover {
   transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(255, 0, 0, 1);
 }
 
-.neon-button:active {
+.electric-button:active {
   transform: scale(0.95);
 }
 
 .button-text {
   position: relative;
   z-index: 2;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-}
-
-.button-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 0, 0, 0.3) 0%,
-    transparent 70%
-  );
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.neon-button:hover .button-glow {
-  opacity: 1;
 }
 
 /* Responsive Design */
@@ -180,7 +158,7 @@ a {
     padding: 0 20px;
   }
 
-  .neon-button {
+  .electric-button {
     padding: 15px 40px;
     font-size: 1.5rem;
   }
@@ -196,7 +174,7 @@ a {
     line-height: 1.7;
   }
 
-  .neon-button {
+  .electric-button {
     padding: 18px 50px;
     font-size: 1.75rem;
   }
